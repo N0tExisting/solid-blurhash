@@ -5,6 +5,8 @@ name: CI
 
 on: [push, pull_request, workflow_dispatch]
 
+# FIXME: pnpm doesn't install itself correctly when setting up node with cache 'pnpm'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +24,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          #cache: pnpm
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install
         run: pnpm install --frozen-lockfile
@@ -54,7 +59,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          #cache: pnpm
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install
         run: pnpm install --frozen-lockfile
@@ -78,7 +86,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          #cache: pnpm
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install
         run: pnpm install --frozen-lockfile
@@ -106,7 +117,10 @@ jobs:
 #        uses: actions/setup-node@v2
 #        with:
 #          node-version: ${{ matrix.node-version }}
-#          cache: "pnpm"
+#          #cache: pnpm
+#
+#      - name: Install pnpm
+#        run: npm install -g pnpm
 #
 #      - name: Install
 #        run: pnpm install --frozen-lockfile
