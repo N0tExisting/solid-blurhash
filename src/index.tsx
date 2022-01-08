@@ -1,2 +1,3 @@
-export { default, type BlurhashImgProps } from './Img';
-export { default as Blurhash, type BlurhashProps } from './Canvas';
+export { default as BlurImg, type BlurImgProps } from './Img';
+export { default as BlurhashCanvas, type BlurhashCanvasProps } from './Canvas';
+export { default as createBlurhash } from './createBlurhash';

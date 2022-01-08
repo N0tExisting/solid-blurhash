@@ -7,14 +7,14 @@ import {
 	type ComponentProps,
 } from 'solid-js';
 
-export interface BlurhashProps extends ComponentProps<'canvas'> {
+export interface BlurhashCanvasProps extends ComponentProps<'canvas'> {
 	hash: string;
 	resX: number;
 	resY: number;
 	punch?: number;
 }
 
-const BlurhashCanvas = (props: BlurhashProps) => {
+const BlurhashCanvas = (props: BlurhashCanvasProps) => {
 	const [p, other] = splitProps(props, [
 		'hash',
 		'resX',
