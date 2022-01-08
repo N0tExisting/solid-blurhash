@@ -1,0 +1,10 @@
+{
+	"cSpell.words": [
+		"blurhash",
+		"blurhashing",
+		"eslintcache",
+		"pnpm",
+		"tsdoc"
+	],
+	"typescript.tsdk": "node_modules\\typescript\\lib"
+}
