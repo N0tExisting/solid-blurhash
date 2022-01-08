@@ -1,7 +1,8 @@
-node_modules
-types
-dist
+**/node_modules/
+/dist/
+/coverage/
+/types/
 
 # Misc
 .DS_Store
-.dccache
+/.dccache

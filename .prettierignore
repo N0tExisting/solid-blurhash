@@ -1,6 +1,9 @@
-**/node_modules/**
-/dist
+**/node_modules/
+/dist/
+/coverage/
 /types
 
+/pnpm-lock.yaml
+
 # Prettier messes up the comments
-tsconfig*.json
+/tsconfig.json
